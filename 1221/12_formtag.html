@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1">
+    <title>12_폼태그</title>
+  </head>
+  <body>
+    <h2>12_form(폼) p.122</h2>
+    <p>폼태그란? 사용자가 입력한 정보(id,password 등)를 서버로 전송하는 역할을 하며, 폼태그를 활용한 양식 종류에는 로그인,회원가입,검색,예약 폼등 다양한 양식, 서식을 만들 수 있다.</p>
+    <p>양식을 만들때는 form태그로 묶어서 작성하며, name(폼이름),method(전송방법),action(받을 서버주소) 속성이 들어간다.</p>
+    
+    <h3>폼태그의 종류</h3>
+    <ul>
+    <li>form</li>
+    <li>fieldset,legend</li>
+    <li>input</li>
+    <li>select,option</li>
+    <li>textarea</li>
+    </ul>
+
+    <h3>폼태그 사용</h3>
+    
+    <form name="양식만들기" method="get/post" action="받을주소서버">  
+    
+    <h4>1. 기본 폼태그</h4>
+      <p>1)<b>txt박스</b>:한글,영문자를 입력하고자 할 때 사용하는 양식이며, 가장 많이 사용되는 양식이다.</p>
+      <label for="txt_box">아이디: </label>
+      <input type="text" id="txt_box" maxlength="16">
+
+      <p>2)<b>password박스</b>: 패스워드를 입력할 때 사용하는 서식이며 글자가 보이지 않도록 '기호'로 처리된다.</p>
+      <label for="pass_box">패스워드: </label>
+      <input type="password" id="pass_box" maxlength="16">
+
+      <p>3)<b>라디오 버튼</b>:여러개의 항목중에 하나만 선택이 가능한 양식으로서 name속성을 사용해야 하나만 선택이 가능하다.</p>
+      성별선택: 
+      <input type="radio" checked name="a" id="r01">
+      <label for="r01">남</label>
+      <input type="radio" name="a" id="r02">
+      <label for="r02">여</label>
+
+      <p>라디오버튼,체크박스는 사용자가 텍스트를 클릭하여 선택할 수 있도록 id값으로 설정한다. 웹접근성 측면에서 pc,tablet,mobile 사용자가 편하고 쉽게 선택할 수 있는 하나의 수단이 됨</p>
+      
+      <p>4)<b>체크박스</b>: 여러개의 항목들 중에서 사용자가 원하는 항목만 선택할 수 있는 양식</p>
+      나의 취미: <input type="checkbox" id="c01"><label for="c01">컴퓨터</label>
+      <input type="checkbox" id="c02"><label for="c02">게임</label>
+      <input type="checkbox" id="c03"><label for="c03">음악감상</label>
+      <input type="checkbox" id="c04"><label for="c04">기타</label>
+      
+      <p>5)<b>선택목록</b>: 사용자가 목록중에서 원하는 항목을 선택하는 양식으로 쇼핑몰 옵션선택, 전화번호 통신사 선택, 
+        예매인원 선택, 언어설정, 패밀리사이트 등의 양식을 만들고자 할 때 사용 </p>
+      
+      <select>
+      <option value="">언어설정</option>
+      <option value="">55Size</option>
+      <option value="">66Size</option>
+      <option value="">77Size</option>
+      </select>
+
+      <p>6)<b>다중텍스트 박스</b>: 한줄 입력이 아닌 여러줄의 내용을 입력하고자 할 때 사용.</p>
+      <textarea rows="10" cols="50">
+        이곳에 내용을 입력합니다. 문의하기 글, 카페 글쓰기, 메일쓰기 내용 등
+      </textarea>
+
+      <p>7)<b>파일첨부</b>:게시판이나 이메일 양식에서 상대방에게 파일을 첨부하여 보내기 위한 양식</p>
+      파일첨부하기<input type="file">
+
+      <p>8)<b>버튼</b>: 전송하기,취소하기,일반버튼,이미지버튼</p>
+      <input type="submit" value="전송하기">
+      <input type="reset" value="취소하기">
+      <input type="button" value="일반버튼">
+      <input type="image" src="./images/facebook_btn.jpg">
+      <!--value값을 적어줘야 어떤 브라우저에서 봐도 동일하게 보임-->
+
+    </form>
+    
+  </body>
+</html>

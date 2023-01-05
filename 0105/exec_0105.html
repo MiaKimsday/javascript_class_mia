@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제_김성지_0105</title>
+  <style>
+    .slide_wrapper *{margin:0px; padding:0px;}
+    ul,li,ol{list-style:none;}
+    a{text-decoration:none;
+    color:#333;}
+    .slide_wrapper{
+      width:100%;
+      margin:0px auto;
+      /* border:3px solid #000; */
+      position:relative;
+    }
+    .slide{
+      width:500%;
+      display:flex;
+      position:relative; left:0px;
+      /* overflow:hidden; */
+      transition:0.5s;
+    }
+    .slide>li{
+      width:100%; 
+    }
+
+    .slide img {width:100%;}
+
+    article>a:first-of-type{
+      position:absolute;
+      color:#000;
+      background-color: lightgray;
+      margin-left: 10px;
+      padding:1%;
+      top:40%
+    }
+    article>a:last-of-type{
+      position:absolute;
+      color:#000;
+      background-color: lightgray;
+      margin-right: 10px;
+      padding:1%;
+      top:40%;
+      right:0px;
+    }
+  </style>
+  <script src="./script/exec.js" defer></script>
+</head>
+<body>
+  <h2>실습예제.캐러셀 슬라이드</h2>
+  <p>가로 1,200px 사이즈로 만들기</p>
+
+  <article class="slide_wrapper">
+    <ul class="slide">
+      <li><a href="javascript:;" title=""><img src="./exec_images/coopang01.jpg"></a></li>
+      <li><a href="javascript:;" title=""><img src="./exec_images/coopang02.jpg"></a></li>
+      <li><a href="javascript:;" title=""><img src="./exec_images/coopang03.jpg"></a></li>
+      <li><a href="javascript:;" title=""><img src="./exec_images/coopang04.jpg"></a></li>
+      <li><a href="javascript:;" title=""><img src="./exec_images/coopang05.jpg"></a></li>
+    </ul>
+    <a href="javascript:;" title="이전" id="prev_btn">이전</a>
+    <a href="javascript:;" title="다음" id="next_btn">다음</a>
+  </article>
+</body>
+</html>

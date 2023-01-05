@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../4.css/1219"
+		},
+		{
+			"path": "../../../4.css/1216"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "04JAVASCRIPT"
+	}
+}
