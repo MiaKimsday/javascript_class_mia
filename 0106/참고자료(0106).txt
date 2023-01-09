@@ -1,0 +1,40 @@
+학습결과물 올리기 (0106)
+1. 네이버 영화 갤러리 제작
+2. 좌,우 슬라이드 컨텐츠 꼭 올리기
+
+자바스크립트 라이브러리 언어
+-제이쿼리
+  https://www.tiobe.com/tiobe-index/
+python:인공지능,빅데이터를 이용해서 파이썬을 사용한다. 
+SQL: 데이터베이스 언어 
+
+-영어로 min
+
+git add . 
+git commit -m 'alkdnflandfkln'
+git status
+git push origin main
+
+닷홈 
+웹서버 정보:Apache 2.4
+Apache:리눅스 운영체제에서 돌아가는 서버 
+
+
+내 서버 환경
+os: 리눅스
+웹서버: Apache2.4
+사용언어: PHP7.4
+DB: MySQL 8.0
+도메인주소(홈페이지 주소)
+MYSQL주소 
+http://id.dothome.co.kr/myadmin
+-------------------------------------
+ex.
+OS:윈도우
+웹서버:IIS
+사용언어:ASP
+DB(데이터베이스): MS-SQL
+
+-----------------------------------------
+공통
+자바(JAVA)
