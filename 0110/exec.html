@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타벅스 실습예제</title>
+
+  <style>
+section{
+  width:100%;
+}
+.main{
+  position:relative;
+}
+.b_main{
+  width:100%;
+}
+.main img{
+  position:absolute;
+}
+
+
+/* 이미지 위치,사이즈 조정 */
+
+.main img:nth-child(2){
+  right:33%;
+  width:10%;
+  margin-top:3%;
+  display:none;
+}
+.main img:nth-child(3){
+  right:44%;
+  width:13%;
+  margin-top:2%;
+  display:none;
+}
+.main img:nth-child(4){
+  right:35%;
+  width:15%;
+  margin-top:9%;
+  display:none;
+}
+.main img:nth-child(5){
+  right:49%;
+  width:11%;
+  margin-top:10%;
+  display:none;
+}
+
+.main img:nth-child(6){
+  right:22%;
+  width:23%;
+  margin-top:11%;
+  display:none;
+}
+.main img:nth-child(7){
+  right:24%;
+  width:9%;
+  margin-top:7%;
+  display:none;
+}
+
+.main img:last-child{
+  right:17%;
+  width:6%;
+}
+
+.logo{
+  width:15%;
+  left:9%;
+  margin-top: 4%;
+}
+
+  </style>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- 제이쿼리 -->
+  <script>
+$(function(){
+  $('#sub1').delay(100).fadeIn();
+  $('#sub2').delay(1000).fadeIn();
+  $('#sub3').delay(1900).fadeIn();
+  $('#sub4').delay(2800).fadeIn();
+  $('#sub5').delay(3600).fadeIn();
+  $('#sub6').delay(4500).fadeIn();
+});
+
+  /*
+  $('첫번째사진'.dalay(100).fadeIn();
+  $('두번째사진'.dalay(1500).fadeIn();
+  $('세번째사진'.dalay(100).fadeIn();
+  */
+
+  </script>
+</head>
+<body>
+  <h2>스타벅스 실습예제</h2>
+  <section>
+    <article class="main">
+    <img src="./exec02/images/bev_bg.jpg" alt="main" class="b_main">
+
+    <!-- 커피,폰트 이미지 -->
+    <img src="./exec02/images/bev1_cup.png" alt="c_sub1" id="sub1">
+    <img src="./exec02/images/bev1_txt.png" alt="l_sub1" id="sub2">
+    <img src="./exec02/images/bev2_cup.png" alt="c_sub2" id="sub3">
+    <img src="./exec02/images/bev2_txt.png" alt="l_sub2" id="sub4">
+    <img src="./exec02/images/bev3_cup.png" alt="c_sub3" id="sub5">
+    <img src="./exec02/images/bev3_txt.png" alt="l_sub3" id="sub6">
+
+    <img src="./exec02/images/m_18_emblem.png" alt="logo" class="logo">
+    <!--프리퀀시 관련 이미지-->
+    <img src="./exec02/images/badge_main_autumn2.png" alt="event">
+    
+
+    </article>
+
+    <article>
+      <h3>빛나는 크리스마스를 <br>스타벅스에서 가장 먼저 만나보세요.</h3>
+      <p>기간:2018년 10월 26일 ~ 2018년 11월 28일</p>
+    </article>
+  </section>
+</body>
+</html>
