@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exec_0111</title>
+  <style>
+    *{margin:0px;padding:0px;}
+    ol,ul,li{
+      text-decoration:none;
+    }
+
+    .bar01,.bar02,.bar03,.bar04{
+      position:relative;
+      width:10px;
+      background-color:#00f;
+    }
+    ul li{
+      display:flex;
+      padding:20px;
+    }
+
+
+    /* 김성지 능력치 */
+    #bar_total span{
+      display:flex;
+    }
+
+
+    #bar_total span div{
+      background-color: black;
+      width:600px;
+    }
+
+  .left_1,.left_2,.left_3,.left_4{padding:30px;}
+  .left_1{margin-left:50px;}
+  .left_2{margin-left:70px;}
+
+  
+  </style>
+
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- 제이쿼리 UI라이브러리; 버튼,메뉴,콘텐츠서식(https://jqueryui.com/) -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <script>
+    $(function(){
+      $('.bar01').animate({'width':'200px'},900,'easeInQuint');
+      $('.bar02').animate({'width':'150px'},900,'easeInQuint');
+      $('.bar03').animate({'width':'100px'},900,'easeInQuint');
+      $('.bar04').animate({'width':'300px'},900,'easeInQuint');
+
+
+    });
+  </script>
+
+</head>
+<body>
+  <h2>실습예제_Skill</h2>
+  <ul>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="bar01">&nbsp;</div>&nbsp;&nbsp;50%</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="bar02">&nbsp;</div>&nbsp;&nbsp;50%</li>
+    <li>&nbsp;&nbsp;&nbsp;JAVASCRIPT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="bar03">&nbsp;</div>&nbsp;&nbsp;50%</li>
+    <li>&nbsp;&nbsp;&nbsp;PHOTOSHOP&nbsp;&nbsp;&nbsp;&nbsp;<div class="bar04">&nbsp;</div>&nbsp;&nbsp;50%</li>
+  </ul>
+
+  <article>
+  <h2>김성지 능력치</h2>
+  <ul id="bar_total">
+
+    <span>
+
+    <p class="left_1">HTML</p>
+    <li><div>&nbsp</div></li>
+    <p class="right_l">70%</p>
+    </span>
+
+    <span>
+    <p class="left_2">CSS</p>
+    <li><div>&nbsp</div></li>
+    <p class="right_l">70%</p>
+    </span>
+
+    <span>
+    <p class="left_3">JAVASCRIPT</p>
+    <li><div>&nbsp</div></li>
+    <p class="right_l">70%</p>
+    </span>
+
+    <span>
+    <p class="left_4">PHOTOSHOP</p>
+    <li><div>&nbsp</div></li>
+    <p class="right_l">70%</p>
+    </span>
+  </ul>
+</article>
+
+</body>
+</html>
