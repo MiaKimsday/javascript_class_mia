@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>control_slide02 컨트롤 버튼이 있는 슬라이드 구현(auto기능추가)</title>
+  <style>
+    *{margin:0px;padding:0px;}
+    a{color:#333;text-decoration:none;}
+    ul,li,ol{list-style:none;}
+    h2,dl,dt,dd{padding:10px;}
+    .b_wrap{
+      margin:0px auto;
+      border:2px solid #000;
+      width:250px; height:200px;
+      background:pink;
+      /* overflow:hidden; */
+    }
+    .banner{
+      display:flex;
+      position:relative;
+      }
+      /* jquery에서 animate left값 적용할때 사용하는 방법 */
+      /* position 사용안하려면 jquery에 마진값을 적용해야 한다. */
+    .c_btn{
+      display:flex;
+      justify-content: center;
+      transform:translateY(15px);
+    }
+    .c_btn>li{
+      width:10px;height:10px;
+      background:#333;
+      border-radius:50%;
+      margin:0px 2px;
+      cursor: pointer;
+      transition:0.3s;
+    }
+
+    .on{
+      background:#ccc !important;
+      width:25px !important;
+      border-radius:10px !important;
+    }
+
+  </style>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+    
+    //1.인덱스값을 저장하기 위한 변수선언
+    let n = $('.c_btn li').index();
+    console.log(n); //0이 나온다.
+
+    //이미지 너비값 구하기 
+    let img_w = $('.banner img').width()*n;
+
+    //2. 사용자가 컨트롤 버튼을 클릭시 해당 index 값 구해보기
+    $('.c_btn li').click(function(){
+    n=$(this).index();
+    console.log(n); //0,1,2,3....
+    console.log(img_w*n); //0,250,500,750...
+
+    $('.banner').stop().animate({'left':-img_w*n},500);
+
+    $('.c_btn li').removeClass('on'); //1번값에 꼭 class명 적용필요 (on) 
+    $(this).addClass('on'); 
+  });
+
+    //3. 3초마다 반복호출하여 슬라이드가 자동으로 움직이게 한다.
+    function autoSlide(n){
+    n = -(n*$('.banner img').width());
+    $('.banner').animate({'left':n},500);
+    }
+
+    let Timer =setInterval(function(){
+    if(n==3){
+      n=0;
+      $('.c_btn li').removeClass('on');
+      $('.c_btn li').eq(n).addClass('on');
+    }else{
+      n++;
+      $('.c_btn li').removeClass('on');
+      $('.c_btn li').eq(n).addClass('on');
+    }
+    autoSlide(n);
+    },3000);
+
+    $('.c_btn').hover(function(){
+      clearInterval(Timer);
+    },function(){
+      Timer =setInterval(function(){
+    if(n==3){
+      n=0;
+      $('.c_btn li').removeClass('on');
+      $('.c_btn li').eq(n).addClass('on');
+    }else{
+      n++;
+      $('.c_btn li').removeClass('on');
+      $('.c_btn li').eq(n).addClass('on');
+    }
+    autoSlide(n);
+    },3000);
+    });
+
+  });
+  </script>
+
+</head>
+<body>
+  <h2>control_slide02 컨트롤 버튼이 있는 슬라이드 구현(auto기능추가)</h2>
+
+
+  <article class="b_wrap">
+    <ul class="banner">
+      <li><a href="#"title=""><img src="./images/emp-policy-slide2.png" alt="">
+      </a></li>
+      <li><a href="#"title=""><img src="./images/emp-policy-slide3.png" alt="">
+      </a></li>
+      <li><a href="#"title=""><img src="./images/emp-policy-slide4.png" alt="">
+      </a></li>
+      <li><a href="#"title=""><img src="./images/emp-policy-slide5.png" alt="">
+      </a></li>
+    </ul>
+
+    <ul class="c_btn">
+      <li class="on">&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+    </ul>
+  </article>
+</body>
+</html>

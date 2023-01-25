@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제_0113</title>
+  <!--폰트어썸 연결-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  
+  <style>
+    *{margin:0px; padding:0px;}
+    ul,li,ol{list-style:none;}
+    h2,dl,dt,dd{padding:10px;}
+
+    .b_wrap{
+      border:3px solid #000;
+      width:340px; height:378px;
+      margin:0px auto;
+    }
+
+    .banner{
+      display:flex;
+      /* position:relative; */
+    }
+    .c_btn{
+      display:flex;
+      justify-content:center;
+      transform:translateY(-30px);
+    }
+
+    .c_btn li{
+      width:15px;height:15px;
+      background-color: #333;
+      border-radius: 50%;
+      margin:0px 2px;
+      transition:0.3s;
+    }
+
+
+
+  </style>
+
+
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  
+  <script>
+    
+  </script>
+</head>
+<body>
+  <h2>0113_실습예제_컨트롤 버튼이 있는 슬라이드 구현하기</h2>
+
+  <article class="b_wrap">
+    
+  <ul class="banner">
+    <li><a href="#" title=""><img src="./images/01-1.jpg" alt="img1"></a></li>
+    <li><a href="#" title=""><img src="./images/02-1.jpg" alt="img2"></a></li>
+    <li><a href="#" title=""><img src="./images/03-1.jpg" alt="img3"></a></li>
+  </ul>
+
+  <ul class="c_btn">
+    <li class="on">&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+  </ul>
+
+  <ul class="p_btn">
+    <li><i class="fas fa fa-play"></i></li>
+    <li><i class="fas fa fa-pause"></i></li>
+  </ul>
+
+</article>
+</body>
+</html>

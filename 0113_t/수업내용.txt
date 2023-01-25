@@ -1,11 +1,10 @@
 수업내용
 1. 제이쿼리
- - animate메서드 응용1
- - animate메서드 응용2
-http://jeon9897.github.io/javascript_class/0112/index.html
-
+ - 이미지 슬라이드
+ - 이미지 슬라이드 응용
 2. SQL데이터베이스
  - sql명령어 학습하기
+3. 기초학습평가(git, jquery, sql)
 3. 프로젝트 개발
 -----------------------
 학습결과물 올리기
