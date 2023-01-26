@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제_쿠팡실습예제_0125</title>
+  <style>
+  *{margin:0px; padding:0px;}
+  ul,li,ol{list-style:none;}
+  a{text-decoration:none;}
+
+  .banner{position:relative;}
+  .banner div{position:absolute;}
+  .banner ul {position:absolute;
+    transform: translateX(1500px);
+    margin-top:40px;}
+  .banner div ul li a{width:100%;}
+
+  .banner nav ul li{
+    width:180px; height:60px;}
+  .banner nav ul li:hover{
+    border:2px solid blue;
+  }
+  </style>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+
+    $(function(){
+      let idx = 0;
+      setInterval(time,1000);
+      function time(){
+        let box = $('.class');
+        box.removeClass('on');
+        box.eq(idx).addClass('on');
+        idx++;
+        if(idx >= box.length) idx=0;
+        console()
+      }
+
+    $('.banner nav li a').mouseenter(function(){
+      let url = $(this).attr('href');
+      console.log(url); 
+      $('.banner div img').attr('src',url);
+    });
+
+    
+  
+
+
+  });
+  </script>
+</head>
+
+<body>
+  <article class="banner">
+    <div>
+      <img src="./images03/banner01.jpg" alt="banner">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./images03/banner01.jpg" title=""><img src="./images03/nav01.jpg" alt="nav1" class="banner"></a></li>
+        <li><a href="./images03/banner02.jpg" title=""><img src="./images03/nav02.png" alt="nav2" ></a></li>
+        <li><a href="./images03/banner03.jpg" title=""><img src="./images03/nav03.jpg" alt="nav3"></a></li>
+        <li><a href="./images03/banner04.jpg" title=""><img src="./images03/nav04.jpg" alt="nav4"></a></li>
+        <li><a href="./images03/banner05.png" title=""><img src="./images03/nav05.png" alt="nav5"></a></li>
+        <li><a href="./images03/banner06.jpg" title=""><img src="./images03/nav06.png" alt="nav6"></a></li>
+      </ul>
+    </nav>
+
+  </article>
+</body>
+</html>

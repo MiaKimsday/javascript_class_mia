@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0px; padding:0px;}
+    ol,li,ul{list-style:none;}
+    .banner{position:relative;}
+    .banner div {position:absolute;}
+    .banner ul {position:absolute;} 
+    .banner ul li a img{
+      display:block;}
+    .banner div ul li a img{
+      position:absolute;
+    }
+    .banner nav ul{margin-top:30px;}
+    .banner nav ul li a img {transform:translateX(1600px);
+    cursor:pointer;}
+    .banner nav ul li a img:hover{
+      border:2px solid blue;
+    }
+
+  .bannner div ul li a:first-of-type img{z-index:5;}
+  .bannner div ul li a:nth-of-type(2) img{z-index:4;}
+  .bannner div ul li a:nth-of-type(3) img{z-index:3;}
+  .bannner div ul li a:nth-of-type(4) img{z-index:2;}
+  .bannner div ul li a:last-of-type img{z-index:1;}
+  </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    </script>
+</head>
+<body>
+  <article class="banner">
+    <div>
+      <ul>
+        <li><a href="#" title=""><img src="./images03/banner01.jpg" alt="banner01">
+        </a></li>
+        <li><a href="#" title=""><img src="./images03/banner02.jpg" alt="banner02" ></a></li>
+        <li><a href="#" title=""><img src="./images03/banner03.jpg" alt="banner03"></a></li>
+        <li><a href="#" title=""><img src="./images03/banner04.jpg" alt="banner04"></a></li>
+        <li><a href="#" title=""><img src="./images03/banner05.png" alt="banner05"></a></li>
+        <li><a href="#" title=""><img src="./images03/banner06.jpg" alt="banner06"></a></li>
+      </ul>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#" title=""><img src="./images03/nav01.jpg" alt=""></a></li>
+        <li><a href="#" title=""><img src="./images03/nav02.png" alt=""></a></li>
+        <li><a href="#" title=""><img src="./images03/nav03.jpg" alt=""></a></li>
+        <li><a href="#" title=""><img src="./images03/nav04.jpg" alt=""></a></li>
+        <li><a href="#" title=""><img src="./images03/nav05.png" alt=""></a></li>
+        <li><a href="#" title=""><img src="./images03/nav06.png" alt=""></a></li>
+      </ul>
+    </nav>
+
+  </article>
+</body>
+</html>
