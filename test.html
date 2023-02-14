@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for/in</title>
+</head>
+<script>
+  //4.for/in문
+  // 문법: for(변수 in 객체){객체의 모든 열거할 수 있는 속성의 개수만큼 반복적으로 실행하고자 하는 실행문을 작성}
+  let arr = ['일','월','화','수','목','금','토']; //배열 전체데이터 출력
+  document.write(arr[2]); //배열 2번째 데이터 출력
+  document.write('<hr>');
+
+  for(let i=0;i<arr.length;i++){ //배열의 인덱스 번호를 출력하는 방법 lenth는 1부터 배열의 갯수를 받아오기 때문에 1이 증가되어 나온다(?)
+    document.write(i+'');
+  } 
+
+  document.write('<hr>');
+
+  for(let i in arr){
+    document.write(i+'');
+  }
+
+  //객체의 속성 출력하기
+  let person = {
+    name:'김성지',
+    age:'23'
+  }
+  document.write('<hr>');
+  document.write(person.age);
+
+  document.write('<hr>');
+  for(let i in person){
+    document.write('<p>'+i+':'+person[i]+'</p>');
+  }
+
+  //5.for/of문 작성법: for(변수 of 객체){객체의 모든 열거 할 수 있는 속성의 개수만큼 반복적으로 실행하는 내용.}
+  let arr1 = [3,4,5]
+  for(let i=0; i<arr1.length;i++){
+    document.write(arr1[i]+'');
+  }
+  document.write('<hr>');
+  //for of문을 사용하여 set객체의 속성에 접근하기
+  let arr2 =new Set([1,2,3,4,5,6,8,10,20]); //객체를 만들어서 
+  for(let value of arr2){ //for/of문을 이용해셔
+    document.write(value+''); //객체 호출하기
+  }
+  document.write('<hr>');
+  
+
+  
+
+
+</script>
+<body>
+  <h2>for/in문</h2>
+  <p>상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다.</p>
+  <h2>for/of문</h2>
+  <p>반복할 수 있는 객체를 순회할 수 있도록 해주는 반복문으로서 루프마다 객체의 열거할 수 있는 프로퍼티의 값을 지정된 변수에 대입한다. 
+    단,for/of익스플로럴에서는 지원이 안됨.</p>
+</body>
+</html>

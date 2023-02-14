@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 json데이터 출력하기</title>
+    <style>
+      caption{
+        font-size:20px;
+        padding:20px;
+        font-weight:bold;
+      }
+      table{
+        margin:0px auto;
+        border:1px solid #333;
+        border-collapse:collapse;
+        width:1200px;
+      }
+      
+      th,td{border:1px solid #333;}
+      th,td{padding:10px 20px;
+      text-align:center;}
+
+    </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function(){
+      $.getJSON('./data/test_drive.json',function(data){
+
+        //두번째 시도
+        let car_data="";
+        $.each(data,function(key,value){
+          console.log(key);
+          car_data+="<tr>"
+          car_data+="<td>"+value.code+"</td>"
+          car_data+="<td>"+value.name+"</td>"
+          car_data+="<td>"+value.phone+"</td>"
+          car_data+="<td>"+value.messenger+"</td>"
+          car_data+="<td>"+value.email+"</td>"
+          car_data+="<td>"+value.region+"</td>"
+          car_data+="<td>"+value.s_car+"</td>"
+          car_data+="<td>"+value.my_car+"</td>"
+          car_data+="<td>"+value.date+"</td>"
+          car_data+="</tr>"
+        });
+        $("#car_table").append(car_data);
+
+
+
+
+
+        //   let no1 = data[key].date.newArray();
+        //   let no2 = data[key].date.newArray();
+        //   let no3 = data[key].date.newArray();
+        //   let no4 = data[key].date.newArray();
+        //   let no5 = data[key].date.newArray();
+        //   let no6 = data[key].date.newArray();
+        //   let no7 = data[key].date.newArray();
+        //   let no8 = data[key].date.newArray();
+
+        //   let json = JSON.parse(jsonText); //json 파일로 바꾸기
+
+        //   for(i=0;i<json.length;i++){ //값 전체 가져오기
+        //     no1[i] = json[i].code;
+        //     no2[i] = json[i].name;
+        //     no3[i] = json[i].phone;
+        //     no4[i] = json[i].email;
+        //     no5[i] = json[i].name;
+        //     no6[i] = json[i].name;
+        //     no7[i] = json[i].name;
+        //     no8[i] = json[i].code;
+        //   }
+        //   let table = document.getElementById('car');
+
+        //   for(i=0;i<no1.length;i++){
+        //     let tr = document.createElement("tr");
+
+        //     let td1 =document.createElement("td");
+        //     td1.appendChild(document.createTextNode(no1[i]+""));
+
+        //     let td2 = document.createElement("td");
+        //     td2.appendChild(document.createTextNode(no2[1]+""));
+
+
+        //     tr.appendChild(td1);
+        //     tr.appendChild(td2);
+
+        //     table.appendChild(tr);
+        //   }
+
+
+
+          // for(key in data){
+          //   // console.log('핸드폰번호:'+data[key].date)
+          //   // document.write(data[key]);
+          //   document.write('코드번호:'+data[key].code);
+          //   document.write('이름:'+data[key].name);
+          //   document.write('핸드폰:'+data[key].phone);
+          //   document.write('핸드폰:'+data[key].messenger);
+          //   document.write('핸드폰:'+data[key].email);
+          //   document.write('핸드폰:'+data[key].s_car);
+          //   document.write('핸드폰:'+data[key].my_car);
+          //   document.write('핸드폰:'+data[key].date);
+          // }
+        });
+      });
+
+      document.write('<table>');
+        for(key in data){
+          document.write('<tr>');
+        }
+
+
+    </script>
+</head>
+<body>
+  <h2>자바스크립트 json데이터 출력하기</h2>
+  <p>닷홈 SQL데이터 베이스에 저장된 'test_drive'테이블의 자료를 'json'파일로 저장하여 자바스크립트로 출력해보기</p>
+
+  <table id="car_table">
+
+    <thead>
+      <caption>시승신청 예약</caption>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Messenger</th>
+        <th>email</th>
+        <th>region</th>
+        <th>s_car</th>
+        <th>my_car</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody id="target">
+    </tbody>
+  </table>
+  
+</body>
+</html>
